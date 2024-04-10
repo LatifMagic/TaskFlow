@@ -1,6 +1,7 @@
 # TaskFlow
 
-<img src="https://ibb.co/FD5bHGK" alt="TaskFlow">
+![TaskFlow](https://github.com/LatifMagic/TaskFlow/assets/166524832/2b80217c-75b9-432e-9f77-7dc6dbe8f039)
+
 
 ## Project Description
 TaskFlow is a React Vite app that allows you to create tasks and seamlessly manage their progress by dragging and dropping them across different stages, such as Todo, In Progress, and Closed.
