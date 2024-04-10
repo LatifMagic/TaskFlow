@@ -4,13 +4,13 @@ import toast from "react-hot-toast";
 function Task({ task, tasks, setTasks }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "task",
-    item: { id: task.id },
+    item: { id: task?.id },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
   }));
   function handleRemoveTask(id) {
-    const fTasks = tasks.filter((task) => task.id !== id);
+    const fTasks = tasks?.filter((task) => task.id !== id) || [];
 
     setTasks(fTasks);
     toast("Task Removed ", { icon: "💀" });

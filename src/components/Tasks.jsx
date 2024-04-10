@@ -7,9 +7,10 @@ function Tasks({ tasks, setTasks }) {
   const [closed, setClossed] = useState([]);
 
   useEffect(() => {
-    const fTodos = tasks.filter((task) => task.status === "todo");
-    const fInProgress = tasks.filter((task) => task.status === "inprogress");
-    const fClosed = tasks.filter((task) => task.status === "closed");
+    const fTodos = tasks?.filter((task) => task.status === "todo") || [];
+    const fInProgress =
+      tasks?.filter((task) => task.status === "inprogress") || [];
+    const fClosed = tasks?.filter((task) => task.status === "closed") || [];
 
     setTodos(fTodos);
     setInProgress(fInProgress);
@@ -19,7 +20,7 @@ function Tasks({ tasks, setTasks }) {
   const statuses = ["todo", "inprogress", "closed"];
   return (
     <div className="md:m-10 flex flex-col sm:flex-row gap-6 w-full md:w-4/5 p-12 md:p-0 text-stone-100">
-      {statuses.map((status, index) => (
+      {statuses?.map((status, index) => (
         <TaskSection
           key={index}
           status={status}

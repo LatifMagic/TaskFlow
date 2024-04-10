@@ -44,12 +44,13 @@ function CreateTask({ setTasks }) {
       >
         <input
           type="text"
-          className="w-64 h-10 p-2 border-2 border-violet-300 rounded-md "
+          className="w-64 h-10 p-2 border-2 border-violet-300 rounded-md"
           value={task.name}
           onChange={(e) =>
             setTask({ ...task, id: uuidv4(), name: e.target.value })
           }
         />
+
         <button
           className="p-2 w-20 rounded-md  font-medium bg-violet-500 text-stone-100 
         hover:bg-violet-800 transition duration-200"
